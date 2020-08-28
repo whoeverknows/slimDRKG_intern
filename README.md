@@ -83,7 +83,7 @@ We split the edge triplets in training, validation and test sets as follows 90%,
 ## Drug Repurposing Examples Using Pretrained Model
 We use dglke_predict command (in DGLKE library) to perform link prediction, which aims to predict the missing h or t for a relation fact triplet (h,r,t). We present a drug repurposing example of using pretrained DRKG model. In the example, we used two of Novartis AG's top 10 drugs based on revenue in 2019, Entresto and Gilenya. For each drug, we predict the missing compound_treat_disease tails; and get the top ranked disease. Link prediction details are shown in the following notebook. 
 
-[Entity Prediction for Drug Re-purpose.ipynb] (Entity Prediction for Drug Re-purpose.ipynb)
+[Entity Prediction for Drug Re-purpose.ipynb](Entity Prediction for Drug Re-purpose.ipynb)
 
 ### Link Prediction Result
 For Entresto, Sacubitril is used in combination with Valsartan, serving as a prodrug neprilysin inhibitor to reduce the risk of cardiovascular events in patients with chronic heart failure (NYHA Class II-IV) and reduced ejection fraction. The top ranked diseases that we predicted are listed as: 
