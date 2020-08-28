@@ -2,6 +2,8 @@
 # Slim Drug Repurposing Knowledge Graph
 Drug repurposing holds the potential to bring medications with known safety profiles to new patient populations. Knowledge graphs encode structured information of entities and relations, and knowledge graph completion aims to perform link prediction between entities. Therefore, Drug Repurposing Knowledge Graph (DRKG) provides a comprehensive biological knowledge graph to realize drug repurposing. 
 Our slim DRKG includes compounds, diseases, genes, side effects and symptoms from three existing databases, which are DrugBank, Hetionet and GNBR. It includes 56,021 entities belonging to 5 entity-types; and 2,307,048 triplets belonging to 57 edge-types. These 57 edge-types show a type of interaction between one of the 8 entity-type pairs (multiple types of interactions are possible between the same entity-pair), as depicted in the figure below. It also includes a bunch of notebooks about how to explore and analysis the DRKG using statistical methodologies or using machine learning methodologies such as knowledge graph embedding.
+![knowledge graph.png](/knowledge graph.png)
+Format: ![Alt Text](url)
 ## Statistics of knowledge graph
 The type-wise distribution of the entities in DRKG and their original data-source(s) is shown in following table.
 entity-type	Drugbank	GNBR	Hetionet	total entities
@@ -26,45 +28,52 @@ Total	1361453	241188	704407	2307048
 
 ## Dataset and codes
 The dataset under the ./data folder contains the following part:
-•	all the raw data where we extracted triplets from, including drugbank full_database.xml, and hetionet edges
-•	./data/embedding, a subfolder including pre-trained embeddings
-•	triplets.tsv, all triplets we finalized in the form of (h, r, t) triplet
-•	relation_glossary.tsv, a file containing glossary of the relations in our slim DRKG, and other associated information with sources (if available).
+* all the raw data where we extracted triplets from, including drugbank full_database.xml, and hetionet edges
+* ./data/embedding, a subfolder including pre-trained embeddings
+* triplets.tsv, all triplets we finalized in the form of (h, r, t) triplet
+* relation_glossary.tsv, a file containing glossary of the relations in our slim DRKG, and other associated information with sources (if available).
+
 The codes component contains the following part:
-•	./drugbank,  a folder containing the codes how we extracted triplets from DrugBank public database
-•	./hetionet,  a folder containing the codes how we extracted triplets and uniform the entities in hetionet 
-•	./disease_normalize, a folder containing the codes to extract disease-relevant triplets and normalized the disease name into MESH id 
-•	extract_triplets_gnbr.py, the code to extract GNBR triplets from the other user-friendly dataset
-•	triplets_clean_up.py, the code the clean-up duplicated triplets across different databases
+* ./drugbank,  a folder containing the codes how we extracted triplets from DrugBank public database
+* ./hetionet,  a folder containing the codes how we extracted triplets and uniform the entities in hetionet 
+* ./disease_normalize, a folder containing the codes to extract disease-relevant triplets and normalized the disease name into MESH id 
+* extract_triplets_gnbr.py, the code to extract GNBR triplets from the other user-friendly dataset
+* triplets_clean_up.py, the code the clean-up duplicated triplets across different databases
 ## Pretrained DRKG embedding
 The DRKG embedding is trained using ComplEx model with dimension size of 400, there are four files:
-•	triple_ComplEx_entity.npy, NumPy binary data, storing the entity embedding
-•	triple_ComplEx _relation.npy, NumPy binary data, storing the relation embedding
-•	entities.tsv, mapping from entity_name to entity_id.
-•	relations.tsv, mapping from relation_name to relation_id
+* triple_ComplEx_entity.npy, NumPy binary data, storing the entity embedding
+*	triple_ComplEx _relation.npy, NumPy binary data, storing the relation embedding
+*	entities.tsv, mapping from entity_name to entity_id.
+*	relations.tsv, mapping from relation_name to relation_id
 To use the pretrained embedding, one can use np.load to load the entity embeddings and relation embeddings separately:
+```
 import numpy as np
 entity_emb = np.load('./embed/DRKG_TransE_l2_entity.npy')
 rel_emb = np.load('./embed/DRKG_TransE_l2_relation.npy')
+```
 ## Tools to analyze DRKG
 We analyze DRKG with some deep learning frameworks, including DGL (a framework for graph neural networks) and DGL-KE (a library for computing knowledge graph embeddings). Please follow the instructions below to install the deep learning frameworks in the platform.
 ### Activate environment in AWS EC2
 We train the embedding with AWS EC2 p2.xlarge instance (Deep Learning AMI Ubuntu 16.04 platform), and choose conda-based PyTorch environment. We use PuTTY and WinSCP to get access to the linux instance (AWS EC2 User Guide). Use the following command to activate the environment. Following the user guide (p.20 – p.27) to setup Jupyter server.
-source activate pytorch_latest_p36
+```source activate pytorch_latest_p36```
 ### Install PyTorch
 Currently all notebooks use PyTorch as Deep Learning backend. Currently, the dgl-ke_predict command only support torchvision<=0.6.0, so please install PyTorch with the following command. 
+```
 conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+```
 To install other versions of PyTorch, please go to Install PyTorch.
 ### Install DGL
 Please install DGL (a framework for graph neural networks) with the following command. It installs DGL with CUDA support.
-conda install -c dglteam dgl-cuda10.1     # For CUDA 10.1 Build 
+```conda install -c dglteam dgl-cuda10.1     # For CUDA 10.1 Build ```
 To install other versions of DGL, please go to Install DGL
 ### Install DGL-KE
 If you want to train the model with notebooks and perform link predict with DGL-KE, you need to install both DGL and DGL-KE package, and follow the command below.
+```
 git clone https://github.com/awslabs/dgl-ke.git
 cd dgl-ke/python
 python3 setup.py install
+```
 ## Knowledge graph embedding analysis
 We split the edge triplets in training, validation and test sets as follows 90%, 5%, and 5% and train the KGE model as shown in following notebook.
 train_triplets_embedding.ipynb
