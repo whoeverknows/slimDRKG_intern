@@ -2,8 +2,8 @@
 # Slim Drug Repurposing Knowledge Graph
 Drug repurposing holds the potential to bring medications with known safety profiles to new patient populations. Knowledge graphs encode structured information of entities and relations, and knowledge graph completion aims to perform link prediction between entities. Therefore, Drug Repurposing Knowledge Graph (DRKG) provides a comprehensive biological knowledge graph to realize drug repurposing. 
 Our slim DRKG includes compounds, diseases, genes, side effects and symptoms from three existing databases, which are DrugBank, Hetionet and GNBR. It includes 56,021 entities belonging to 5 entity-types; and 2,307,048 triplets belonging to 57 edge-types. These 57 edge-types show a type of interaction between one of the 8 entity-type pairs (multiple types of interactions are possible between the same entity-pair), as depicted in the figure below. It also includes a bunch of notebooks about how to explore and analysis the DRKG using statistical methodologies or using machine learning methodologies such as knowledge graph embedding.
-
-![alt text](./knowledge graph.png)
+![GitHub Logo](/knowledge graph.png)
+Format: ![Alt Text](url)
 
 ## Statistics of knowledge graph
 The type-wise distribution of the entities in DRKG and their original data-source(s) is shown in following table.
