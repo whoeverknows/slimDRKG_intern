@@ -1,0 +1,148 @@
+doid	name_lower	mesh_id_x	mesh_id_y	mesh_name	mesh_id
+DOID:2531	hematologic cancer	D019337			D019337
+DOID:1319	brain cancer	D001932			D001932
+DOID:1324	lung cancer	D008175	D008175	Lung Neoplasms	D008175
+DOID:263	kidney cancer	D007680			D007680
+DOID:1793	pancreatic cancer	D010190			D010190
+DOID:4159	skin cancer	D012878			D012878
+DOID:184	bone cancer	D001859			D001859
+DOID:0060119	pharynx cancer	D010610	D010610	Pharyngeal Neoplasms	D010610
+DOID:2394	ovarian cancer	D010051			D010051
+DOID:1612	breast cancer	D001943			D001943
+DOID:3070	malignant glioma	D005910			D005910
+DOID:363	uterine cancer	D014594			D014594
+DOID:3953	adrenal gland cancer	D000310			D000310
+DOID:5041	esophageal cancer	D004938			D004938
+DOID:8850	salivary gland cancer	D012468			D012468
+DOID:10283	prostate cancer	C537243			C537243
+DOID:10283	prostate cancer	D011471			D011471
+DOID:10534	stomach cancer	D013274			D013274
+DOID:11054	urinary bladder cancer	D001749			D001749
+DOID:1192	peripheral nervous system neoplasm	D010524			D010524
+DOID:1781	thyroid cancer	D013964	D013964	Thyroid Neoplasms	D013964
+DOID:3571	liver cancer	D008113			D008113
+DOID:4362	cervical cancer	D002583	D002583	Uterine Cervical Neoplasms	D002583
+DOID:119	vaginal cancer	D014625			D014625
+DOID:11934	head and neck cancer	D006258			D006258
+DOID:1993	rectum cancer	D012004			D012004
+DOID:2174	ocular cancer	D005134			D005134
+DOID:219	colon cancer	D003110			D003110
+DOID:2596	larynx cancer	D007822			D007822
+DOID:2994	germ cell cancer	D009373			D009373
+DOID:3277	thymus cancer	D013953			D013953
+DOID:4045	muscle cancer	D009217			D009217
+DOID:0060073	lymphatic system cancer				
+DOID:10021	duodenum cancer	D004379	D004379	Duodenal Neoplasms	D004379
+DOID:10153	ileum cancer	D007078	D007078	Ileal Neoplasms	D007078
+DOID:10811	nasal cavity cancer				
+DOID:1115	sarcoma	D012509	D012509	Sarcoma	D012509
+DOID:11239	appendix cancer	D001063			D001063
+DOID:11615	penile cancer	D010412	D010412	Penile Neoplasms	D010412
+DOID:11819	ureter cancer	D014516			D014516
+DOID:11920	tracheal cancer	D014134	D014134	Tracheal Neoplasms	D014134
+DOID:1245	vulva cancer	D014846			D014846
+DOID:13499	jejunal cancer	D007580			D007580
+DOID:1725	peritoneum cancer	D010534	D010534	Peritoneal Neoplasms	D010534
+DOID:175	vascular cancer	D019043			D019043
+DOID:1790	malignant mesothelioma	D008654			D008654
+DOID:1909	melanoma	D008545			D008545
+DOID:1964	fallopian tube cancer	D005185			D005185
+DOID:2998	testicular cancer	D013736			D013736
+DOID:3121	gallbladder cancer	D005706			D005706
+DOID:3565	meningioma	D008577			D008577
+DOID:4606	bile duct cancer	D001650			D001650
+DOID:5099	middle ear cancer				
+DOID:5559	mediastinal cancer	D008479			D008479
+DOID:5612	spinal cancer	D013120			D013120
+DOID:5875	retroperitoneal cancer	D012186			D012186
+DOID:9917	pleural cancer				
+DOID:8778	crohn's disease	C536215			C536215
+DOID:8778	crohn's disease	D003424			D003424
+DOID:2377	multiple sclerosis	D009103			D009103
+DOID:9352	type 2 diabetes mellitus	D003924			D003924
+DOID:8577	ulcerative colitis	D003093			D003093
+DOID:9744	type 1 diabetes mellitus	D003922			D003922
+DOID:7148	rheumatoid arthritis	D001172			D001172
+DOID:3393	coronary artery disease	D003324			D003324
+DOID:3393	coronary artery disease	D003327			D003327
+DOID:3393	coronary artery disease	D017202			D017202
+DOID:9970	obesity	D009765			D009765
+DOID:10608	celiac disease	D002446			D002446
+DOID:9074	systemic lupus erythematosus	D008180			D008180
+DOID:9835	refractive error	D012030			D012030
+DOID:12236	primary biliary cirrhosis	D008105			D008105
+DOID:12306	vitiligo	D014820			D014820
+DOID:10871	age related macular degeneration	D008268			D008268
+DOID:14221	metabolic syndrome x	D024821			D024821
+DOID:2841	asthma	D001249			D001249
+DOID:8893	psoriasis	D011565	D011565	Psoriasis	D011565
+DOID:5419	schizophrenia	D012559			D012559
+DOID:6364	migraine	D008881			D008881
+DOID:10652	alzheimer's disease	C536597			C536597
+DOID:10652	alzheimer's disease	D000544			D000544
+DOID:12361	graves' disease	D006111			D006111
+DOID:14330	parkinson's disease	D010300			D010300
+DOID:3310	atopic dermatitis	D003876			D003876
+DOID:3312	bipolar disorder	D001714			D001714
+DOID:7147	ankylosing spondylitis	D013167			D013167
+DOID:11612	polycystic ovary syndrome	D011085			D011085
+DOID:10763	hypertension	D006973			D006973
+DOID:418	systemic scleroderma	D012595			D012595
+DOID:13241	behcet's disease	D001528			D001528
+DOID:5408	paget's disease of bone	C538098			C538098
+DOID:5408	paget's disease of bone	D010001			D010001
+DOID:1024	leprosy	D007918			D007918
+DOID:10941	intracranial aneurysm	D002532			D002532
+DOID:1686	glaucoma	D005901			D005901
+DOID:332	amyotrophic lateral sclerosis	D000690			D000690
+DOID:0050425	restless legs syndrome	D012148			D012148
+DOID:13378	kawasaki disease	D009080			D009080
+DOID:1936	atherosclerosis	D050197			D050197
+DOID:986	alopecia areata	C531609			C531609
+DOID:986	alopecia areata	D000506			D000506
+DOID:11476	osteoporosis	D010024			D010024
+DOID:1459	hypothyroidism	D007037			D007037
+DOID:2986	iga glomerulonephritis	C538412			C538412
+DOID:2986	iga glomerulonephritis	D005922			D005922
+DOID:0050741	alcohol dependence	D000437	D000437	Alcoholism	D000437
+DOID:11949	creutzfeldt-jakob disease	D007562			D007562
+DOID:14227	azoospermia	D053713			D053713
+DOID:1826	epilepsy syndrome	D004827			D004827
+DOID:2043	hepatitis b	D006509			D006509
+DOID:3083	chronic obstructive pulmonary disease	D029424			D029424
+DOID:7693	abdominal aortic aneurysm	D017544			D017544
+DOID:784	chronic kidney failure	D007676			D007676
+DOID:8398	osteoarthritis	D010003	D010003	Osteoarthritis	D010003
+DOID:9008	psoriatic arthritis	D015535			D015535
+DOID:0050742	nicotine dependence	D014029	D014029	Tobacco Use Disorder	D014029
+DOID:10976	membranous glomerulonephritis	D015433			D015433
+DOID:11714	gestational diabetes	D016640			D016640
+DOID:12365	malaria	D008288			D008288
+DOID:12849	autistic disorder	D001321			D001321
+DOID:12930	dilated cardiomyopathy	C536231			C536231
+DOID:12930	dilated cardiomyopathy	C536277			C536277
+DOID:12930	dilated cardiomyopathy	D002311			D002311
+DOID:13189	gout	D015210			D015210
+DOID:13223	uterine fibroid	D007889			D007889
+DOID:14268	sclerosing cholangitis	D015209			D015209
+DOID:8986	narcolepsy	D009290			D009290
+DOID:90	degenerative disc disease	D055959	D055959	Intervertebral Disc Degeneration	D055959
+DOID:9296	cleft lip	D002971			D002971
+DOID:0050156	idiopathic pulmonary fibrosis	D054990			D054990
+DOID:1094	attention deficit hyperactivity disorder	D001289			D001289
+DOID:11119	gilles de la tourette syndrome	D005879			D005879
+DOID:14004	thoracic aortic aneurysm	D017545			D017545
+DOID:1595	endogenous depression	D003866			D003866
+DOID:4481	allergic rhinitis	D065631	D065631	"Rhinitis, Allergic"	D065631
+DOID:4989	pancreatitis	D010195			D010195
+DOID:585	nephrolithiasis	D053040			D053040
+DOID:824	periodontitis	D010518			D010518
+DOID:9206	barrett's esophagus	D001471			D001471
+DOID:11555	fuchs' endothelial dystrophy	D005642			D005642
+DOID:12185	otosclerosis	D010040			D010040
+DOID:12995	conduct disorder	D019955			D019955
+DOID:1312	focal segmental glomerulosclerosis	D005923			D005923
+DOID:216	dental caries	D003731			D003731
+DOID:2355	anemia	D000740			D000740
+DOID:594	panic disorder	D016584			D016584
+DOID:635	acquired immunodeficiency syndrome	D000163			D000163
