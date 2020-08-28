@@ -33,18 +33,18 @@ The following table shows the number of triplets between different entity-type p
 | Total                  |       1,361,453   |       241,188  |       704,407    |                  2,307,048     |
 
 ## Dataset and codes
-The dataset under the ./data folder contains the following part:
+The dataset under the [./data](/data/) folder contains the following part:
 * all the raw data where we extracted triplets from, including drugbank full_database.xml, and hetionet edges
 * ./data/embedding, a subfolder including pre-trained embeddings
 * triplets.tsv, all triplets we finalized in the form of (h, r, t) triplet
 * relation_glossary.tsv, a file containing glossary of the relations in our slim DRKG, and other associated information with sources (if available).
 
 The codes component contains the following part:
-* ./drugbank,  a folder containing the codes how we extracted triplets from DrugBank public database
-* ./hetionet,  a folder containing the codes how we extracted triplets and uniform the entities in hetionet 
-* ./disease_normalize, a folder containing the codes to extract disease-relevant triplets and normalized the disease name into MESH id 
-* extract_triplets_gnbr.py, the code to extract GNBR triplets from the other user-friendly dataset
-* triplets_clean_up.py, the code the clean-up duplicated triplets across different databases
+* [./drugbank](/drugbank/),  a folder containing the codes how we extracted triplets from DrugBank public database
+* [./hetionet](/hetionet/),  a folder containing the codes how we extracted triplets and uniform the entities in hetionet 
+* [./disease_normalize](/disease_normalize/), a folder containing the codes to extract disease-relevant triplets and normalized the disease name into MESH id 
+* extract_triplets_gnbr.py , the code to extract GNBR triplets from the other user-friendly dataset
+* triplets_clean_up.py , the code the clean-up duplicated triplets across different databases
 ## Pretrained DRKG embedding
 The DRKG embedding is trained using ComplEx model with dimension size of 400, there are four files:
 * triple_ComplEx_entity.npy, NumPy binary data, storing the entity embedding
@@ -99,13 +99,13 @@ We split the edge triplets in training, validation and test sets as follows 90%,
 ## Drug Repurposing Examples Using Pretrained Model
 We use dglke_predict command (in DGLKE library) to perform link prediction, which aims to predict the missing h or t for a relation fact triplet (h,r,t). We present a drug repurposing example of using pretrained DRKG model. In the example, we used two of Novartis AG's top 10 drugs based on revenue in 2019, Entresto and Gilenya. For each drug, we predict the missing compound_treat_disease tails; and get the top ranked disease. Link prediction details are shown in the following notebook. 
 
-[Entity Prediction for Drug Re-purpose.ipynb](https://github.com/whoeverknows/slimDRKG_intern/blob/master/Entity Prediction for Drug Re-purpose.ipynb)
+[Entity Prediction for Drug Re-purpose.ipynb](https://github.com/whoeverknows/slimDRKG_intern/blob/master/Entity%20Prediction%20for%20Drug%20Re-purpose.ipynb)
 
 ### Link Prediction Result
-For Entresto, Sacubitril is used in combination with Valsartan, serving as a prodrug neprilysin inhibitor to reduce the risk of cardiovascular events in patients with chronic heart failure (NYHA Class II-IV) and reduced ejection fraction. The top ranked diseases that we predicted are listed as: 
+For [Entresto](https://www.drugbank.ca/unearth/q?utf8=%E2%9C%93&searcher=drugs&query=Entresto), [Sacubitril](https://www.drugbank.ca/drugs/DB09292) is used in combination with [Valsartan](https://www.drugbank.ca/drugs/DB00177), serving as a prodrug neprilysin inhibitor to reduce the risk of cardiovascular events in patients with chronic heart failure (NYHA Class II-IV) and reduced ejection fraction. The top ranked diseases that we predicted are listed as: 
 - Sacubitril: congenital pain insensitivity, congenital, Hypothermia, Retinal Diseases, Overactive Urinary Bladder, Kidney Diseases, Diabetes Mellitus.
 - Valsartan: hypertension, abdominal aortic aneurysm, diabetes mellitus. 
 
-For Gilenya, Fingolimod is a sphingosine 1-phosphate receptor modulator for the treatment of relapsing-remitting multiple sclerosis. It was developed by Novartis and initially approved by the FDA in 2010. The top ranked diseases that we predicted are listed as:
+For [Gilenya](https://www.drugbank.ca/drugs/DB08868), Fingolimod is a sphingosine 1-phosphate receptor modulator for the treatment of relapsing-remitting multiple sclerosis. It was developed by Novartis and initially approved by the FDA in 2010. The top ranked diseases that we predicted are listed as:
 
 - Fingolimod: Muscular Diseases, Nausea, Van der Woude syndrome, Parkinson Disease, Neoplasms , Optic Nerve Diseases, Metabolic Diseases, Cholestasis
