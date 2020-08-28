@@ -64,7 +64,9 @@ We analyze DRKG with some deep learning frameworks, including DGL (a framework f
 ### Activate environment in AWS EC2
 We train the embedding with AWS EC2 p2.xlarge instance (Deep Learning AMI Ubuntu 16.04 platform), and choose conda-based PyTorch environment. We use PuTTY and WinSCP to get access to the linux instance ([AWS EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html)). Use the following command to activate the environment. Following the [user guide](https://docs.aws.amazon.com/dlami/latest/devguide/dlami-dg.pdf) (p.20 – p.27) to setup Jupyter server.
 
-```source activate pytorch_latest_p36```
+```
+source activate pytorch_latest_p36
+```
 
 ### Install PyTorch
 Currently all notebooks use PyTorch as Deep Learning backend. Currently, the [dglke_predict](https://dglke.dgl.ai/doc/predict.html) command only support torchvision<=0.6.0, so please install PyTorch with the following command. 
@@ -76,13 +78,15 @@ pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pyto
 
 To install other versions of PyTorch, please go to [Install PyTorch](https://pytorch.org/).
 ### Install DGL
-Please install DGL (a framework for graph neural networks) with the following command. It installs DGL with CUDA support.
+Please install [DGL](https://github.com/dmlc/dgl) (a framework for graph neural networks) with the following command. It installs DGL with CUDA support.
 
-```conda install -c dglteam dgl-cuda10.1     # For CUDA 10.1 Build ```
+```
+conda install -c dglteam dgl-cuda10.1     # For CUDA 10.1 Build 
+```
 
 To install other versions of DGL, please go to [Install DGL](https://docs.dgl.ai/en/latest/install/index.html).
 ### Install DGL-KE
-If you want to train the model with notebooks and perform link predict with DGL-KE, you need to install both DGL and DGL-KE package, and follow the command below.
+If you want to train the model with notebooks and perform link prediction with [DGL-KE](https://github.com/awslabs/dgl-ke), you need to install both DGL and DGL-KE package, and follow the command below.
 
 ```
 git clone https://github.com/awslabs/dgl-ke.git
@@ -90,7 +94,7 @@ cd dgl-ke/python
 python3 setup.py install
 ```
 
-To install DGL-KE in different CUDA build, please go to [install DGL-KE](https://dglke.dgl.ai/doc/install.html)
+To install DGL-KE for different CUDA build, please go to [install DGL-KE](https://dglke.dgl.ai/doc/install.html)
 
 ## Knowledge graph embedding analysis
 We split the edge triplets in training, validation and test sets as follows 90%, 5%, and 5% and train the KGE model as shown in following notebook.
