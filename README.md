@@ -1,2 +1,3 @@
 # InternNovartis
-TL summer intern @Novartis
+Slim Drug Repurposing Knowledge Graph
+Summer Intern project @ Novartis
