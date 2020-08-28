@@ -12,12 +12,12 @@ __Figure:__ Interactions in the slim DRKG. The number next to an edge indicates 
 The type-wise distribution of the entities in DRKG and their original data-source(s) is shown in following table.
 |entity-type | Drugbank |	GNBR | Hetionet | Total entities|
 |:---:|:---:|:---:|:---:|:---:|
-|Compound |	9053 | 3180	| 1536 | 9559|
-|Disease|	1749|	4565 | 136 | 4933|
-|Gene	| 4247 | 25042 | 18270 | 35413|
-|Side Effect|	-| - | 5701 |	5701|
-|Symptom	| -	|-	|415	| 415|
-|Total	|15049	| 26492 |	21866 |	56021|
+|  Compound    |          9,053 |     3,180 |            1,536  |               9,559   |
+|  Disease     |          1,749 |     4,565 |               136 |               4,933   |
+|  Gene        |          4,247 |   25,042  |         18,270    |             35,413    |
+|  Side Effect |  -             |  -        |            5,701  |               5,701   |
+|  Symptom     |  -             |  -        |               415 |                   415 |
+|  total       |        15,049  |   32,787  |         26,058    |             56,021    |
 
 The following table shows the number of triplets between different entity-type pairs in DRKG and from various data sources.
 
@@ -102,15 +102,18 @@ We split the edge triplets in training, validation and test sets as follows 90%,
 [train_triplets_embedding.ipynb](https://github.com/whoeverknows/slimDRKG_intern/blob/master/train_triplets_embeddings.ipynb)
 
 ## Drug Repurposing Examples Using Pretrained Model
-We use dglke_predict command (in DGLKE library) to perform link prediction, which aims to predict the missing h or t for a relation fact triplet (h,r,t). We present a drug repurposing example of using pretrained DRKG model. In the example, we used two of Novartis AG's top 10 drugs based on revenue in 2019, Entresto and Gilenya. For each drug, we predict the missing compound_treat_disease tails; and get the top ranked disease. Link prediction details are shown in the following notebook. 
+We use [dglke_predict](https://dglke.dgl.ai/doc/predict.html) command (in DGLKE library) to perform link prediction, which aims to predict the missing *h* or *t* for a relation fact triplet __(h,r,t)__. We present a drug repurposing example of using pretrained DRKG model. In the example, we used two of Novartis AG's top 10 drugs based on revenue in 2019, [Entresto](https://www.drugbank.ca/unearth/q?utf8=%E2%9C%93&searcher=drugs&query=Entresto) and [Gilenya](https://www.drugbank.ca/drugs/DB08868). For each drug, we predict the missing compound_treat_disease tails; and get the top ranked diseases name. Link prediction details are shown in the following notebook. 
 
 [Entity Prediction for Drug Re-purpose.ipynb](https://github.com/whoeverknows/slimDRKG_intern/blob/master/Entity%20Prediction%20for%20Drug%20Re-purpose.ipynb)
 
 ### Link Prediction Result
-For [Entresto](https://www.drugbank.ca/unearth/q?utf8=%E2%9C%93&searcher=drugs&query=Entresto), [Sacubitril](https://www.drugbank.ca/drugs/DB09292) is used in combination with [Valsartan](https://www.drugbank.ca/drugs/DB00177), serving as a prodrug neprilysin inhibitor to reduce the risk of cardiovascular events in patients with chronic heart failure (NYHA Class II-IV) and reduced ejection fraction. The top ranked diseases that we predicted are listed as: 
+For [Entresto](https://www.drugbank.ca/unearth/q?utf8=%E2%9C%93&searcher=drugs&query=Entresto), [Sacubitril](https://www.drugbank.ca/drugs/DB09292) is used in combination with [Valsartan](https://www.drugbank.ca/drugs/DB00177), serving as a prodrug neprilysin inhibitor to reduce the risk of cardiovascular events in patients with chronic heart failure (NYHA Class II-IV) and reduced ejection fraction. The top ranked diseases we predicted are listed as: 
 - Sacubitril: congenital pain insensitivity, congenital, Hypothermia, Retinal Diseases, Overactive Urinary Bladder, Kidney Diseases, Diabetes Mellitus.
 - Valsartan: hypertension, abdominal aortic aneurysm, diabetes mellitus. 
 
 For [Gilenya](https://www.drugbank.ca/drugs/DB08868), Fingolimod is a sphingosine 1-phosphate receptor modulator for the treatment of relapsing-remitting multiple sclerosis. It was developed by Novartis and initially approved by the FDA in 2010. The top ranked diseases that we predicted are listed as:
 
 - Fingolimod: Muscular Diseases, Nausea, Van der Woude syndrome, Parkinson Disease, Neoplasms , Optic Nerve Diseases, Metabolic Diseases, Cholestasis
+## Acknowledge
+The project uses public data sources and codes (including [COVID-19 DRKG](https://github.com/gnn4dr/DRKG#drug-repurposing-knowledge-graph-drkg) and [Hetionet/Rephetio](https://think-lab.github.io/p/rephetio/)). This project belongs to the US Pharma HEOR Data Science Team @ Novartis. 
+
