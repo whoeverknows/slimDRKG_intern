@@ -1,0 +1,51 @@
+2020-08-24 15:20:16 INFO     model_name          :ComplEx
+2020-08-24 15:20:16 INFO     data_path           :./train
+2020-08-24 15:20:16 INFO     dataset             :triple
+2020-08-24 15:20:16 INFO     format              :raw_udd_hrt
+2020-08-24 15:20:16 INFO     data_files          :['triple_train.tsv', 'triple_valid.tsv', 'triple_test.tsv']
+2020-08-24 15:20:16 INFO     save_path           :ckpts/ComplEx_triple_1
+2020-08-24 15:20:16 INFO     no_save_emb         :False
+2020-08-24 15:20:16 INFO     max_step            :100000
+2020-08-24 15:20:16 INFO     batch_size          :2048
+2020-08-24 15:20:16 INFO     batch_size_eval     :16
+2020-08-24 15:20:16 INFO     neg_sample_size     :256
+2020-08-24 15:20:16 INFO     neg_deg_sample      :False
+2020-08-24 15:20:16 INFO     neg_deg_sample_eval :False
+2020-08-24 15:20:16 INFO     neg_sample_size_eval:10000
+2020-08-24 15:20:16 INFO     eval_percent        :1
+2020-08-24 15:20:16 INFO     no_eval_filter      :False
+2020-08-24 15:20:16 INFO     log_interval        :1000
+2020-08-24 15:20:16 INFO     eval_interval       :10000
+2020-08-24 15:20:16 INFO     test                :True
+2020-08-24 15:20:16 INFO     num_proc            :1
+2020-08-24 15:20:16 INFO     num_thread          :1
+2020-08-24 15:20:16 INFO     force_sync_interval :-1
+2020-08-24 15:20:16 INFO     hidden_dim          :400
+2020-08-24 15:20:16 INFO     lr                  :0.1
+2020-08-24 15:20:16 INFO     gamma               :12.0
+2020-08-24 15:20:16 INFO     double_ent          :False
+2020-08-24 15:20:16 INFO     double_rel          :False
+2020-08-24 15:20:16 INFO     neg_adversarial_sampling:True
+2020-08-24 15:20:16 INFO     adversarial_temperature:1.0
+2020-08-24 15:20:16 INFO     regularization_coef :1e-07
+2020-08-24 15:20:16 INFO     regularization_norm :3
+2020-08-24 15:20:16 INFO     gpu                 :[0]
+2020-08-24 15:20:16 INFO     mix_cpu_gpu         :False
+2020-08-24 15:20:16 INFO     valid               :False
+2020-08-24 15:20:16 INFO     rel_part            :False
+2020-08-24 15:20:16 INFO     async_update        :False
+2020-08-24 15:20:16 INFO     eval_filter         :True
+2020-08-24 15:20:16 INFO     soft_rel_part       :False
+2020-08-24 15:20:16 INFO     strict_rel_part     :False
+2020-08-24 15:20:16 INFO     num_workers         :8
+2020-08-24 15:20:16 INFO     num_test_proc       :1
+
+
+proc 0 takes 1183.004 seconds
+training takes 1183.005676984787 seconds
+[0]Test average MRR: 0.485582912214583
+[0]Test average MR: 347.933751181157
+[0]Test average HITS@1: 0.3910258077379869
+[0]Test average HITS@3: 0.5418888108675111
+[0]Test average HITS@10: 0.6593239881060744
+testing takes 382.349 seconds
