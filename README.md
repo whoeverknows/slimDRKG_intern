@@ -36,30 +36,30 @@ The following table shows the number of triplets between different entity-type p
 ## Dataset and codes
 The dataset under the [./data](/data/) folder contains the following part:
 * all the raw data where we extracted triplets from, including drugbank full_database.xml, and hetionet edges
-* ./data/embedding, a subfolder including pre-trained embeddings
-* triplets.tsv, all triplets we finalized in the form of (h, r, t) triplet
-* relation_glossary.tsv, a file containing glossary of the relations in our slim DRKG, and other associated information with sources (if available).
+* [./data/embedding](/data/embedding/), a subfolder including pre-trained embeddings
+* `triplets.tsv`, all triplets we finalized in the form of (h, r, t) triplet
+*  `relation_glossary.tsv`, a file containing glossary of the relations in our slim DRKG, and other associated information with sources (if available).
 
 The codes component contains the following part:
-* [./drugbank](/drugbank/),  a folder containing the codes how we extracted triplets from DrugBank public database
-* [./hetionet](/hetionet/),  a folder containing the codes how we extracted triplets and uniform the entities in hetionet 
+* [./drugbank](/drugbank/),  a folder containing the codes how we extracted triplets from [DrugBank](https://www.drugbank.ca/releases/latest) public database
+* [./hetionet](/hetionet/),  a folder containing the codes how we extracted triplets and uniform the entities in [Hetionet](https://het.io/) 
 * [./disease_normalize](/disease_normalize/), a folder containing the codes to extract disease-relevant triplets and normalized the disease name into MESH id 
-* extract_triplets_gnbr.py , the code to extract GNBR triplets from the other user-friendly dataset
-* triplets_clean_up.py , the code the clean-up duplicated triplets across different databases
+* extract_triplets_gnbr.py , the code to extract GNBR triplets from the other user-friendly dataset ([DRKG for Covid-19](https://github.com/gnn4dr/DRKG#drug-repurposing-knowledge-graph-drkg))
+* triplets_clean_up.py , the code to clean-up duplicated triplets extracted from the above.
 ## Pretrained DRKG embedding
-The DRKG embedding is trained using ComplEx model with dimension size of 400, there are four files:
+The DRKG embedding is trained using [ComplEx](https://arxiv.org/pdf/1606.06357.pdf) model with dimension size of 400, there are four files:
 * triple_ComplEx_entity.npy, NumPy binary data, storing the entity embedding
 *	triple_ComplEx _relation.npy, NumPy binary data, storing the relation embedding
 *	entities.tsv, mapping from entity_name to entity_id.
 *	relations.tsv, mapping from relation_name to relation_id
 To use the pretrained embedding, one can use np.load to load the entity embeddings and relation embeddings separately:
-```
+```python
 import numpy as np
 entity_emb = np.load('./embed/DRKG_TransE_l2_entity.npy')
 rel_emb = np.load('./embed/DRKG_TransE_l2_relation.npy')
 ```
 ## Tools to analyze DRKG
-We analyze DRKG with some deep learning frameworks, including DGL (a framework for graph neural networks) and DGL-KE (a library for computing knowledge graph embeddings). Please follow the instructions below to install the deep learning frameworks in the platform.
+We analyze DRKG with some deep learning frameworks, including [DGL](https://github.com/dmlc/dgl) (a framework for graph neural networks) and [DGL-KE](https://github.com/awslabs/dgl-ke) (a library for computing knowledge graph embeddings). Please follow the instructions below to install the deep learning frameworks in the platform.
 
 ### Activate environment in AWS EC2
 We train the embedding with AWS EC2 p2.xlarge instance (Deep Learning AMI Ubuntu 16.04 platform), and choose conda-based PyTorch environment. We use PuTTY and WinSCP to get access to the linux instance ([AWS EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html)). Use the following command to activate the environment. Following the [user guide](https://docs.aws.amazon.com/dlami/latest/devguide/dlami-dg.pdf) (p.20 – p.27) to setup Jupyter server.
@@ -78,7 +78,7 @@ pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pyto
 
 To install other versions of PyTorch, please go to [Install PyTorch](https://pytorch.org/).
 ### Install DGL
-Please install [DGL](https://github.com/dmlc/dgl) (a framework for graph neural networks) with the following command. It installs DGL with CUDA support.
+Please install [DGL](https://github.com/dmlc/dgl) with the following command. It installs DGL with CUDA support.
 
 ```
 conda install -c dglteam dgl-cuda10.1     # For CUDA 10.1 Build 
@@ -115,5 +115,5 @@ For [Gilenya](https://www.drugbank.ca/drugs/DB08868), Fingolimod is a sphingosin
 
 - Fingolimod: Muscular Diseases, Nausea, Van der Woude syndrome, Parkinson Disease, Neoplasms , Optic Nerve Diseases, Metabolic Diseases, Cholestasis
 ## Acknowledge
-The project uses public data sources and codes (including [COVID-19 DRKG](https://github.com/gnn4dr/DRKG#drug-repurposing-knowledge-graph-drkg) and [Hetionet/Rephetio](https://think-lab.github.io/p/rephetio/)). This project belongs to the US Pharma HEOR Data Science Team @ Novartis. 
+The project uses public data sources and codes (including [DRKG for Covid-19](https://github.com/gnn4dr/DRKG#drug-repurposing-knowledge-graph-drkg) and [Hetionet/Rephetio](https://think-lab.github.io/p/rephetio/)). This project is a summer intern project in US Pharma HEOR Data Science Team @ Novartis. This project is for non-commercial research.
 
