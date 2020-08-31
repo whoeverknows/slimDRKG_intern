@@ -7,8 +7,9 @@ Created on Mon Jul 27 09:37:30 2020
 import pandas as pd
 import numpy as np
 import os
-
-hetnet_triplet_df = pd.read_csv('../data/hetionet-v1.0-edges.sif', sep="\t",
+import gzip
+gzfile = gzip.open('../data/hetionet-v1.0-edges.sif.gz')
+hetnet_triplet_df = pd.read_csv(gzfile, sep="\t",
                         names = ['source','metaedge','target'])
 
 triplets = hetnet_triplet_df.values.tolist()
